@@ -1,14 +1,14 @@
 pipeline {
-    agent { docker { image 'python:3.7.2' } }
+    agent any
     stages {
         stage('build') {
             steps {
-                sh 'pip install flask
+                echo 'building pip flask app'
             }
         }
         stage('test') {
             steps {
-                sh 'tests/*'
+                echo 'Testing the flask appte'
             }
         }
     }
